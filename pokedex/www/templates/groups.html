@@ -1,0 +1,29 @@
+<ion-view title="Groups" hide-nav-bar="false" ng-controller="groupsCtrl" cache-view="'false'">
+    <ion-nav-buttons side="right">
+        <button class="button" ng-click="addNewGroup()">
+            <i class="ion-plus-circled"></i>
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content padding="'true'" class="has-header bg_group_page">
+
+        <div id="container_groups">
+            <div class="list card" ng-repeat="group in pokemon_groups_array" id="card_{{group.group_key}}">
+                <div class="item item-avatar">
+                    <img src="img/front_static/0.png">
+                    <h2>{{ group.group_name }}</h2>
+                    <p>created on: {{group.added_on}}</p>
+                </div>
+
+                <div class="item tabs tabs-secondary tabs-icon-left">
+                    <a class="tab-item" href="#" ng-click="deleteGroup(group.group_key)">
+                        <i class="ion-close-circled"></i> Delete
+                    </a>
+                    <a class="tab-item" href="#" ng-click="addToGroup(group.group_key)">
+                        <i class="ion-android-add-circle"></i> Members
+                    </a>
+                </div>
+            </div>
+
+    </ion-content>
+</ion-view>

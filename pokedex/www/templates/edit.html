@@ -1,0 +1,89 @@
+<ion-view title="Edit" hide-nav-bar="false" ng-controller="editPokemonCtrl">
+    <ion-nav-buttons side="primary">
+      <button class="button-clear" ng-click="myGoBack()">
+        <i class="ion-arrow-left-c"></i> Back
+      </button>
+    </ion-nav-buttons>
+
+    <ion-content padding="'true'" class="bg_wild_page">
+
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="item item-text-wrap wild_card_content">
+                    <p class="center_wild">
+                        <img class="pokemon_wild hatch" src="img/front_animated/{{pokemon_edit_data.species_id}}.gif">
+                        </p>
+                    </div>
+
+
+                    <div class="list">
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label">Given Name</span>
+                            <input type="text" placeholder="{{pokemon_edit_data.given_name}}" disabled>
+                        </label>
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label">Species Name</span>
+                            <input type="text" placeholder="{{pokemon_edit_data.species_name}}" disabled>
+                        </label>
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label">Current Lv.</span>
+                            <input type="text" placeholder="{{pokemon_edit_data.level}}" disabled>
+                        </label>
+
+                        <label class="item item-input item-stacked-label">
+                            <span class="input-label">Captured On</span>
+                            <input type="text" placeholder="{{pokemon_edit_data.added_on}}" disabled>
+                        </label>
+
+                        <label class="item item-input item-stacked-label">
+
+                             <button class="button button-small button-clear button-assertive" id="remove_{{pokemon_edit_data.pokemon_key}}" ng-if="pokemon_edit_data.group != 'Unassigned'" ng-click="unassignGroup(pokemon_edit_data.pokemon_key)"> <i class="ion-android-cancel"></i></button>
+                            <span class="input-label">Group Assignment</span> 
+
+                            <input type="text" placeholder="{{pokemon_edit_data.group}}" id="group_{{pokemon_edit_data.pokemon_key}}" disabled>
+
+                        </label>
+                    </div>
+
+
+
+                    <!--
+                    <ion-list>
+                        <ion-item>
+                            <span class="pokemon_name">Given Name: {{pokemon_edit_data.given_name}} </span>
+                        </ion-item>
+                        <ion-item>
+                            <span class="pokemon_name">Species Name: {{pokemon_edit_data.species_name}}  </span>
+                        </ion-item>
+                        <ion-item>
+                            <span class="pokemon_name">Level: {{pokemon_edit_data.level}} </span>
+                        </ion-item>
+                        <ion-item>
+                            <span class="pokemon_name">Captured: {{pokemon_edit_data.added_on}} </span>
+                        </ion-item>
+
+                        <ion-item>
+                            <span class="pokemon_name" id="group_{{pokemon_edit_data.pokemon_key}}">Group: {{pokemon_edit_data.group}}</span>
+                            <button class="button button-light"  id="remove_{{pokemon_edit_data.pokemon_key}}" ng-if="pokemon_edit_data.group != 'Unassigned'" ng-click="unassignGroup(pokemon_edit_data.pokemon_key)">
+                              Remove
+                            </button>
+
+                        </ion-item>
+                    </ion-list>
+
+                    -->
+                </div>
+
+
+
+
+            <button class="button button-light" ng-click="deletePokemon(pokemon_edit_data.pokemon_key)">
+              Release Pokemon
+            </button>
+
+
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,24 @@
+<ion-view title="Signup">
+    <ion-content padding="'true'" scroll="false" class="has-header">
+        <form class="list">
+            <ion-list>
+                <label class="item item-input">
+                    <span class="input-label">Email</span>
+                    <input type="text" placeholder="enter username..." ng-model="data.email">
+                </label>
+            </ion-list>
+            <div class="spacer" style="width: 300px; height: 11px;"></div>
+            <label class="item item-input">
+                <span class="input-label">Username</span>
+                <input type="text" placeholder="you@domain.com" ng-model="data.username">
+            </label>
+            <div class="spacer" style="width: 300px; height: 11px;"></div>
+            <label class="item item-input">
+                <span class="input-label">Password</span>
+                <input type="text" placeholder="At least 6 characters" ng-model="data.password">
+            </label>
+            <div class="spacer" style="width: 300px; height: 24px;"></div>
+            <button class="button button-stable button-block " ng-click="signupEmail()">Sign up</button>
+        </form>
+    </ion-content>
+</ion-view>

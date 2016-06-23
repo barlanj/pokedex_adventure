@@ -1,0 +1,52 @@
+<ion-view title="Wild Pokemon" hide-nav-bar="false">
+    <ion-content padding="'true'" ng-controller="captureButtonCtrl" class="bg_wild_page">
+        <ion-refresher pulling-text="Gotta Catch 'em All!" on-refresh="doRefresh()">
+        </ion-refresher>
+        <div ng-if="pokemon_data" ng-repeat="pokemon in pokemon_data">
+            <div ng-if="$index%3==0" class="row">
+                <div class="col">
+
+                    <div class="card" ng-if="pokemon_data[$index]!=null">
+                        <div class="item item-text-wrap wild_card_content center-text">
+                        <p class="center_wild">
+                            <img class="pokemon_wild hatch" ng-controller="captureButtonCtrl" id="{{pokemon_data[$index].id}}/{{pokemon_data[$index].name}}/{{pokemon_data[$index].level}}" src="img/front_animated/{{pokemon_data[$index].id}}.gif" ng-click="capturePokemon(pokemon_data[$index])">
+                            </p>
+                        </div>
+                        <div class="item item-divider center-text">
+                            <span class="pokemon_name">{{pokemon_data[$index].name}} (Lv.{{pokemon_data[$index].level}})</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col">
+                    <div class="card" ng-if="pokemon_data[$index+1]!=null">
+                        <div class="item item-text-wrap wild_card_content">
+                        <p class="center_wild">
+                            <img class="pokemon_wild hatch" ng-controller="captureButtonCtrl" id="{{pokemon_data[$index+1].id}}/{{pokemon_data[$index+1].name}}/{{pokemon_data[$index+1].level}}" src="img/front_animated/{{pokemon_data[$index+1].id}}.gif" ng-click="capturePokemon(pokemon_data[$index+1])">
+                            </p>
+                        </div>
+                        <div class="item item-divider center-text">
+                            <span class="pokemon_name">{{pokemon_data[$index+1].name}} (Lv.{{pokemon_data[$index+1].level}})</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" ng-if="pokemon_data[$index+2]!=null">
+                        <div class="item item-text-wrap wild_card_content">
+                        <p class="center_wild">
+                            <img class="pokemon_wild hatch" ng-controller="captureButtonCtrl" id="{{pokemon_data[$index+2].id}}/{{pokemon_data[$index+2].name}}/{{pokemon_data[$index+2].level}}" src="img/front_animated/{{pokemon_data[$index+2].id}}.gif" ng-click="capturePokemon(pokemon_data[$index+2])">
+                            </p>
+                        </div>
+                        <div class="item item-divider center-text">
+                            <span class="pokemon_name">{{pokemon_data[$index+2].name}} (Lv.{{pokemon_data[$index+2].level}})</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+<script type="text/javascript">
+var window_height = $(window).height();
+var this_toast = document.getElementsByClassName("toast-mid-center");
+</script>

@@ -1,0 +1,52 @@
+<ion-view title="Captured Pokemon" hide-nav-bar="false" ng-controller="editBtnCtrl">
+    <ion-content padding="'true'" class="has-header bg_captured_page">
+
+    <ion-refresher pulling-text="Gotta Catch 'em All!" on-refresh="doRefresh(1)">
+    </ion-refresher>
+
+        <div ng-if="pokemon_data" ng-repeat="pokemon in pokemon_data">
+            <div ng-if="$index%3==0" class="row">
+
+            <div class="col">
+                <div class="card" ng-if="pokemon_data[$index]!=null" id="card_{{pokemon_data[$index].pokemon_key}}">
+                    <div class="item item-text-wrap wild_card_content">
+                    <p class="center_wild">
+                        <img class="pokemon_wild hatch" id="{{pokemon_data[$index].pokemon_key}}" src="img/front_animated/{{pokemon_data[$index].species_id}}.gif" ng-controller="editBtnCtrl" ng-click="editPokemon(pokemon_data[$index])" on-hold="onHold(pokemon_data[$index])">
+                        </p>
+                    </div>
+                    <div class="item item-divider center-text">
+                        <span class="pokemon_name">{{pokemon_data[$index].given_name}} (Lv.{{pokemon_data[$index].level}})</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card" ng-if="pokemon_data[$index+1]!=null" id="card_{{pokemon_data[$index+1].pokemon_key}}">
+                    <div class="item item-text-wrap wild_card_content">
+                    <p class="center_wild">
+                        <img class="pokemon_wild hatch" id="{{pokemon_data[$index+1].pokemon_key}}" src="img/front_animated/{{pokemon_data[$index+1].species_id}}.gif" ng-controller="editBtnCtrl" ng-click="editPokemon(pokemon_data[$index+1])" on-hold="onHold(pokemon_data[$index+1])">
+                    </p>
+                    </div>
+                    <div class="item item-divider center-text">
+                        <span class="pokemon_name">{{pokemon_data[$index+1].given_name}} (Lv.{{pokemon_data[$index+1].level}})</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card" ng-if="pokemon_data[$index+2]!=null" id="card_{{pokemon_data[$index+2].pokemon_key}}">
+                    <div class="item item-text-wrap wild_card_content">
+                    <p class="center_wild">
+                        <img class="pokemon_wild hatch" id="{{pokemon_data[$index+2].pokemon_key}}" src="img/front_animated/{{pokemon_data[$index+2].species_id}}.gif" ng-controller="editBtnCtrl" ng-click="editPokemon(pokemon_data[$index+2])" on-hold="onHold(pokemon_data[$index+2])">
+                    </p>
+                    </div>
+                    <div class="item item-divider center-text">
+                        <span class="pokemon_name">{{pokemon_data[$index+2].given_name}} (Lv.{{pokemon_data[$index+2].level}})</span>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

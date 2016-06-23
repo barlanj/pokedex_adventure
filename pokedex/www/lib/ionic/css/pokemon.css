@@ -1,0 +1,148 @@
+.bg_menu {
+	background-color: #60646D;
+	background: url("../img/view_bg/5b.png") center;
+	background-size: cover;
+}
+
+#loginButton {
+	margin: 0 auto;
+}
+
+.login_image{
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.otto {
+  color: white;
+  text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+
+.login_heading {
+	font-family: "Lucida Console", Monaco, monospace;
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: 50px;
+	margin: 70px 0 70px 0;
+	color: white;
+}
+
+.bg_login_page {
+	background: url("../img/view_bg/1.png") center;
+	background-size: cover;
+	background-color: #344146
+}
+
+.bg_captured_page {
+	background-color: #D5F2D2;
+}
+
+.bg_wild_page {
+	background-color: #e5f3ff;
+}
+
+.bg_group_page {
+	background-color: #cef0f2;
+}
+
+.bg_transparent {
+	background-color: transparent !important;
+}
+
+a.item-content {
+	background-color: transparent !important;
+}
+
+.pokemon_name {
+	text-transform: capitalize;
+	font-size: 12px;
+	text-align: center;
+}
+
+.wild_card_content{
+	vertical-align: bottom;
+	height: 120px;
+	padding: 0px;
+}
+
+.wild_card_content:first-child img{
+	margin: 0 auto;
+}
+
+.center_wild {
+	position: absolute;
+	bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.card {
+	padding: 0px;
+}
+
+/*
+.center_wild {
+    margin: 0 auto;
+}
+
+*/
+/*
+.pokemon_wild {
+	display: block;
+	margin: 0 auto;
+	max-height: 100%;
+	max-width: 100%;
+	vertical-align: bottom;
+
+}
+
+.pokemon_grid {
+	padding: 8px;
+	margin: 0px 4px 0px 4px;
+
+	border-radius: 7px 7px 7px 7px;
+	-moz-border-radius: 7px 7px 7px 7px;
+	-webkit-border-radius: 7px 7px 7px 7px;
+	border: 2px solid #B7C0B9;
+
+	background-color: #F1EBEB;
+	text-align: center;
+}
+
+
+
+.toast-mid-center { 
+    margin: 0 auto;
+} 
+
+
+.center-text {
+	text-align: center;
+}
+
+
+
+
+.card {
+	border: 0px;
+	box-shadow: 0px 0px 0px;
+
+}
+
+.item {
+	border-width: 0px;
+}
+*/

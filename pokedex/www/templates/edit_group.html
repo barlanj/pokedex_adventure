@@ -1,0 +1,23 @@
+<ion-view title="Edit Group" hide-nav-bar="false" ng-controller="groupEditCtrl">
+    <ion-nav-buttons side="primary">
+      <button class="button-clear" ng-click="myGoBack()">
+        <i class="ion-arrow-left-c"></i> Back
+      </button>
+    </ion-nav-buttons>
+
+    <ion-content padding="'true'" class="bg_wild_page">
+
+    <ul class="list" ng-if="unassigned_pokemons" ng-controller="groupEditButtonCtrl">
+
+      <li class="item item-checkbox" ng-repeat="pokemon in unassigned_pokemons" ng-click="pickPokemon2(pokemon.pokemon_key)" id="li_{{pokemon.pokemon_key}}" >
+         <img src="img/small_static/{{pokemon.species_id}}.png" id="img_{{pokemon.pokemon_key}}" >
+         <label class="checkbox" id="label_{{pokemon.pokemon_key}}" >
+           <input type="checkbox" ng-if="pokemon.group == group_picked" id="input_{{pokemon.pokemon_key}}" checked>
+           <input type="checkbox" ng-if="pokemon.group == undefined" id="input_{{pokemon.pokemon_key}}" >
+         </label>
+         {{pokemon.given_name}}
+      </li>
+
+    </ul>
+    </ion-content>
+</ion-view>
